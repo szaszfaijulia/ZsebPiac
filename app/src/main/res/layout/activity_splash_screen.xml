@@ -14,7 +14,7 @@
         android:cropToPadding="false"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/hatter"
+        app:srcCompat="@drawable/background"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="0dp" />
 
@@ -54,6 +54,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"></LinearLayout>
+        app:layout_constraintTop_toTopOf="@+id/imageView"/>
 
 </android.support.constraint.ConstraintLayout>

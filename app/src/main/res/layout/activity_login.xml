@@ -89,6 +89,7 @@
                 android:gravity="end"
                 android:paddingRight="10dp"
                 android:text="Elfelejtette jelszavát?"
+                android:onClick="bottomToolTipDialogBox"
                 android:textAllCaps="false"
                 android:textColor="@drawable/textbuttoncolor"
                 android:textSize="14sp"/>

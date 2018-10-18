@@ -1,58 +1,46 @@
 package com.developals.zsebpiac;
 
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.text.Html;
 import android.util.Base64;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
-import com.facebook.CustomTabMainActivity;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.signin.SignIn;
 import com.google.android.gms.tasks.Task;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
+
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener,GoogleApiClient.OnConnectionFailedListener {
 
@@ -220,4 +208,38 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
         }
     }
+
+    //Tooltip az elfelejtett jelszóhoz
+/*    public void bottomToolTipDialogBox(View view) {
+        TextView toolTipShowButton = (TextView) findViewById(R.id.forgot_password);
+        Tooltip.make(this,
+                new Tooltip.Builder(101)
+                        .anchor(toolTipShowButton, Tooltip.Gravity.BOTTOM)
+                        .closePolicy(new Tooltip.ClosePolicy()
+                                .insidePolicy(true, false)
+                                .outsidePolicy(true, false), 4000)
+                        .activateDelay(900)
+                        .showDelay(400)
+                        .text("Android PopupWindow with Tooltip Arrow Below Button or view or layout")
+                        .maxWidth(600)
+                        .withArrow(true)
+                        .withOverlay(true).build()
+        ).show();
+    }*/
+/*
+    private void showTooltip(View v, int gravity)
+    {
+        Button btn= (Button) v;
+        TooltipCompat toolTip = new TooltipCompat(btn)
+            .setText("Töltse ki az Email cím mezőt!")
+                .setTextColor(Color.WHITE)
+                .setGravity(gravity)
+                .setCornerRadius(8f)
+                .setDismissOnClick(true)
+                .show();
+
+                ;
+
+
+    }*/
 }
